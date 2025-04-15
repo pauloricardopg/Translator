@@ -1,0 +1,17 @@
+.titulo-site {
+    background: linear-gradient(to right, #007bff, #00c6ff); /* azul degradê */
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-site h1 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}

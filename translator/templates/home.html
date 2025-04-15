@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div class="titulo-site">
+        <h1>🌍 Translator</h1>
+    </div>
+    
+    <div class="row">
+        <form method="POST" action="" class="row mt-3">
+            {{ form_traduzir.csrf_token }}
+
+            <div class="col">
+                <legend>Traduzir</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ form_traduzir.idioma_origem.label }}
+                        {{ form_traduzir.idioma_origem(class="form-control") }}
+                    </div>
+                    <div class="form-group mt-2">
+                        {{ form_traduzir.corpo_traduzir(rows=10, cols=50, class="form-control") }}
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col">
+                <legend>Traduzido</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ form_traduzido.idioma_destino.label }}
+                        {{ form_traduzido.idioma_destino(class="form-control") }}
+                    </div>
+                    <div class="form-group mt-2">
+                        {{ form_traduzido.corpo_traduzido(rows=10, cols=50, class="form-control", readonly=true) }}
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-12 mt-3">
+                {{ form_traduzir.botao_submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock body %}
